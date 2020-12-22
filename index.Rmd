@@ -1,30 +1,18 @@
----
-title: "index"
-author: "Steven Herrera"
-date: "8/7/2020"
-output: html_document
----
+### Markdown
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-## R Markdown
+```markdown
+Syntax highlighted code block
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+# Header 1
+## Header 2
+### Header 3
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+- Bulleted
+- List
 
-```{r cars}
-summary(cars)
-```
+1. Numbered
+2. List
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+**Bold** and _Italic_ and `Code` text
