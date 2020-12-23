@@ -1,0 +1,29 @@
+name: "my-website"
+navbar:
+  title: ""
+  type: inverse
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "About"
+      icon: fa-address-card
+      href: about.html
+    - text: "More"
+      icon: fa-bars
+      menu:
+        - text: "Research"
+          href: research.html
+        - text: "CV"
+          href: cv.html
+        - text: "Contact"
+          href: contact.html
+  right:
+    - icon: fa-github
+      href: https://github.com/stevenherrera24
+    - icon: fa-linkedin
+      href: https://www.linkedin.com/in/rosvidstevenherrera/
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
