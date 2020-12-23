@@ -1,5 +1,36 @@
 ---
-title: "About This Website"
+title: ""
 ---
 
-More about this website.
+<br>
+
+<center>
+# About Me
+</center>
+
+***
+
+<br>
+
+## Background
+
+I grew up in rural North Carolina.
+
+<br>
+
+```{r echo=FALSE, fig.show='hold', fig.align = "center"}
+library(cowplot)
+library(ggplot2)
+library(gridExtra)
+
+p1 <- ggdraw() + draw_image("aboutme1.JPG", scale = 2) 
+p2 <- ggdraw() + draw_image("aboutme2.JPG", scale = 0.85)
+p3 <- ggdraw() + draw_image("aboutme3.JPG", scale = 0.85)
+
+grid.arrange(p1, arrangeGrob(p2, p3, nrow = 2), 
+             ncol = 2, widths=c(1, 2)) 
+```
+
+
+
+
