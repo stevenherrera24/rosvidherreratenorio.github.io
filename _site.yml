@@ -1,5 +1,6 @@
 name: "my-website"
 output_dir: "."
+href: favicon_render.html
 navbar:
   title: ""
   type: inverse
