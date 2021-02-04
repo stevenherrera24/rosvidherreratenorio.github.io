@@ -99,5 +99,5 @@ grid.arrange(arrangeGrob(g1 + theme(legend.position = "none"), ncol = 1, nrow = 
 
 ## Future Research
 
-Although the direction of my research will largely be influenced by the Ph.D. program I enroll in, especially through the mentorship of faculty and fellow graduate students, I seek to push the boundaries of my research and make them accessible to audiences that shape immigration policies. Currently, Professor Bonilla-Silva's "Latin Americanization" thesis is something I seriously think about when it comes to the future of the race/ethnicity demographic proportions of the U.S. and how that will shape larger demographic processes.
+Although the direction of my research will largely be influenced by the Ph.D. program I enroll in, especially through the mentorship of faculty and fellow graduate students, I seek to push the boundaries of my research and make it accessible to audiences that shape immigration policies. Currently, Professor Bonilla-Silva's "Latin Americanization" thesis is something I seriously think about when it comes to the future of the race/ethnicity demographic proportions of the U.S. and how that will shape unique demographic processes.
 
