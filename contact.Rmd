@@ -1,5 +1,15 @@
 ---
-title: "My contact"
+title: ""
 ---
 
-Hello, Website!
+<br>
+
+<center>
+# Contact
+</center>
+
+***
+
+<br>
+
+Feel free to contact me at my university email: [rosvid.herrera.tenorio@duke.edu](mailto:rosvid.herrera.tenorio@duke.edu). I am most available on Thursdays and Fridays to chat over Zoom. 

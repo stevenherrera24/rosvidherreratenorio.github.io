@@ -23,5 +23,5 @@ I am a 4th-year undergraduate at Duke University, majoring in Statistical Scienc
 <br>
 
 <center>
-The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html).
+The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: February 3, 2021
 </center>
