@@ -1,5 +1,103 @@
 ---
-title: "My research"
+title: ""
 ---
 
-Hello, Website!
+<br>
+
+<center>
+# Research Interests
+</center>
+
+***
+
+<br>
+
+## Immigrant Integration and Neighborhood Affects
+
+The most extensive piece of research I've worked on is currently my senior thesis, which is still under development and expected to be completed in April 2021. This work examines three particular issues or concerns: (1) the dominating theories of spatial integration and how they're examined, (2) the viability of latent polytomous logistic regression models in identifying key interests in neighborhood selection, and (3) the general overarching history of the Latin American immigrant population within the U.S. South. As I've continued to encounter issues with data assumptions and limitations, I'm becoming increasingly interested in quantitative methods as my focused subfield. Below, I show a map using sample-representative data from the Integrated Public Use Microdata Series (IPUMS) USA database of the Latin American-born immigrant population in states across the U.S. South in 2017. A key issue of debate is whether some of these states should even be included as a representative of the U.S. South region, especially Florida and Texas, and whether including these areas or not in statistical modeling are interesting to me. 
+
+<br>
+
+```{r package_test, include=FALSE}
+# install packages as needed
+pkgTest <- function(x) {
+  if (!require(x,character.only = TRUE))
+    {
+    install.packages(x,repos = "http://cran.r-project.org", dep=TRUE)
+    if(!require(x,character.only = TRUE)) stop("Package not found")
+    }
+}
+pkgTest("tidyverse")
+pkgTest("ggplot2")
+pkgTest("grid")
+pkgTest("gridExtra")
+library(tidyverse)
+library(ggplot2)
+library(grid)
+library(gridExtra)
+ggplot2::theme_set(ggplot2::theme_bw())
+theme_update(plot.title = element_text(hjust = 0.5))
+knitr::opts_chunk$set(echo = F,
+                      message = F,
+                      warning = F)
+```
+
+
+```{r warning = FALSE, fig.show = 'hold', fig.align = 'center', fig.cap = "2017 Latin American Immigrant Population Using 2010 PUMA outlines in the U.S. South. Each PUMA contains at least 100,000 residents, and this figure displays a 1-in-100 sample, with a focus on the Miami-Dade PUMAs, as they contain the largest Latin American Immigrant populations in 2017. Source: IPUMS USA"}
+
+# us_states <- unique(fips_codes$state)[1:51]
+# southern_states <- us_states[us_states %in% c("AL", "AR", "DE", "DC", "FL", "GA",
+#                                               "KY", "LA", "MD", "MS", "NC", "OK",
+#                                               "SC", "TN", "TX", "VA", "WV")]
+# pumas_list <- lapply(southern_states, function(x) {
+#   pumas(state = x, cb = TRUE)
+#   })
+# south_pumas <- rbind_tigris(pumas_list) %>%
+#    mutate(PUMACE10 = as.numeric(PUMACE10))
+# neighborhoods <- neighborhood_agg
+# items <- geo_join(south_pumas, neighborhoods %>%
+#   mutate(LA_POP = Any_Race_LAI) %>%
+#   filter(YEAR == 2017), "PUMACE10", "PUMA")
+# saveRDS(items, file = "items.Rds")
+
+items <- readRDS("items_copy.Rds")
+
+g1 <- ggplot(items) +
+  geom_sf(mapping = aes(fill = LA_POP), lwd = 0.2) + 
+  labs(fill = "Population") +
+  theme_classic() +
+  theme(plot.subtitle = element_text(hjust = 0.5)) +
+  scale_fill_gradient(low="lightblue", high = "blue")
+
+
+g2 <- ggplot(items %>% filter(PUMACE10 %in% 8601:8624)) +
+  geom_sf(mapping = aes(fill = LA_POP), lwd = 0.1) +
+  labs(fill = "",
+       caption = "Miami-Dade PUMAs") +
+  theme_classic() +
+  theme(axis.text.x = element_blank(),
+  axis.text.y = element_blank(),
+  axis.ticks = element_blank(),
+  legend.position = "none",
+  panel.background = element_blank()) +
+  scale_fill_gradient(low = "lightblue", high = "blue")
+
+get_legend <- function(myggplot){
+  tmp <- ggplot_gtable(ggplot_build(myggplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)
+}
+
+grid.arrange(arrangeGrob(g1 + theme(legend.position = "none"), ncol = 1, nrow = 1),
+         arrangeGrob(g2, get_legend(g1), ncol = 1, nrow = 2), heights = c(5, 1), widths = c(4, 1),
+         top = "Heatmap of the Latin American Immigrant Population in the U.S. South in 2017"
+         )
+```
+
+<br>
+
+## Future Research
+
+Although the direction of my research will largely be influenced by the Ph.D. program I enroll in, especially through the mentorship of faculty and fellow graduate students, I seek to push the boundaries of my research and make them accessible to audiences that shape immigration policies. Currently, Professor Bonilla-Silva's "Latin Americanization" thesis is something I seriously think about when it comes to the future of the race/ethnicity demographic proportions of the U.S. and how that will shape larger demographic processes.
+
