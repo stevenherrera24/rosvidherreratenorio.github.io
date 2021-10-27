@@ -14,8 +14,6 @@ navbar:
     - text: "More"
       icon: fa-bars
       menu:
-        - text: "Research"
-          href: research.html
         - text: "CV"
           href: RSHT.CV.pdf
         - text: "Contact"

@@ -12,16 +12,14 @@ title: ""
 
 <br>
 
-<center>
-![Kauai Cliffs](kauaicliffs.JPG)
-</center>
+I am a first-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research interests include acculturation, assimilation, and integration theory, racial stratification, migration, demography, and quantitative methods. I was born in Guatemala, grew up in rural North Carolina, and now live in Berkeley, California. I received my undergraduate degree in Statistical Science from Duke University in 2021 as a David M. Rubenstein Scholar.
 
 <br>
 
-I am a 4th-year undergraduate at Duke University, majoring in Statistical Science and minoring in Sociology. I've spent my past three summers researching [alt-right groups through the Data+ Program](https://bigdata.duke.edu/projects/latinxs-and-right), interning as a [software engineer at Twitter](https://twitter.com/terns/status/1155956826342477824), and volunteering at the [Waipa Foundation in Hawaii](https://dukeengage.duke.edu/pineapples-in-the-kauai-garden/). My research interests include quantitative methodology, demography, social stratification, and (im)migration. I was born in Guatemala City, Guatemala, immigrated to a small, rural town in North Carolina called Sanford (where I grew up), and now live in Cary, North Carolina. My long-term goal is to become a Professor of Sociology.
+When I am not coding, reading, or completing coursework, I am exploring San Francisco, playing tennis, or Facetiming my dogs in North Carolina. I love my dogs.
 
 <br>
 
 <center>
-The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: February 20, 2021
+The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: October 26, 2021
 </center>
