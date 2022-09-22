@@ -13,7 +13,7 @@
 
 <title>research.knit</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -139,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -234,7 +242,7 @@ $(document).ready(function () {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -258,7 +266,7 @@ $(document).ready(function () {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-bars"></span>
      
     More
@@ -308,21 +316,49 @@ $(document).ready(function () {
 </center>
 <hr />
 <p><br></p>
-<div id="immigrant-integration-and-neighborhood-effects" class="section level2">
+<div id="immigrant-integration-and-neighborhood-effects"
+class="section level2">
 <h2>Immigrant Integration and Neighborhood Effects</h2>
-<p>The most extensive piece of research I’ve worked on is currently my senior thesis, which is still under development and expected to be completed in April 2021. This work examines three particular issues or concerns: (1) the dominating theories of spatial integration and how they’re examined, (2) the viability of latent polytomous logistic regression models in identifying key interests in neighborhood selection, and (3) the general overarching history of the Latin American immigrant population within the U.S. South. As I’ve continued to encounter issues with data assumptions and limitations, I’m becoming increasingly interested in quantitative methods as my focused subfield. Below, I show a map using sample-representative data from the Integrated Public Use Microdata Series (IPUMS) USA database of the Latin American-born immigrant population in states across the U.S. South in 2017. A key issue of debate is whether some of these states should even be included as a representative of the U.S. South region, especially Florida and Texas. Whether including these areas or not in statistical modeling are very interesting to me.</p>
+<p>The most extensive piece of research I’ve worked on is currently my
+senior thesis, which is still under development and expected to be
+completed in April 2021. This work examines three particular issues or
+concerns: (1) the dominating theories of spatial integration and how
+they’re examined, (2) the viability of latent polytomous logistic
+regression models in identifying key interests in neighborhood
+selection, and (3) the general overarching history of the Latin American
+immigrant population within the U.S. South. As I’ve continued to
+encounter issues with data assumptions and limitations, I’m becoming
+increasingly interested in quantitative methods as my focused subfield.
+Below, I show a map using sample-representative data from the Integrated
+Public Use Microdata Series (IPUMS) USA database of the Latin
+American-born immigrant population in states across the U.S. South in
+2017. A key issue of debate is whether some of these states should even
+be included as a representative of the U.S. South region, especially
+Florida and Texas. Whether including these areas or not in statistical
+modeling are very interesting to me.</p>
 <p><br></p>
 <div class="figure" style="text-align: center">
 <img src="research_files/figure-html/unnamed-chunk-1-1.png" alt="2017 Latin American Immigrant Population Using 2010 PUMA outlines in the U.S. South. Each PUMA contains at least 100,000 residents, and this figure displays a 1-in-100 sample, with a focus on the Miami-Dade PUMAs, as they contain the largest Latin American Immigrant populations in 2017. Source: IPUMS USA" width="672" />
 <p class="caption">
-2017 Latin American Immigrant Population Using 2010 PUMA outlines in the U.S. South. Each PUMA contains at least 100,000 residents, and this figure displays a 1-in-100 sample, with a focus on the Miami-Dade PUMAs, as they contain the largest Latin American Immigrant populations in 2017. Source: IPUMS USA
+2017 Latin American Immigrant Population Using 2010 PUMA outlines in the
+U.S. South. Each PUMA contains at least 100,000 residents, and this
+figure displays a 1-in-100 sample, with a focus on the Miami-Dade PUMAs,
+as they contain the largest Latin American Immigrant populations in
+2017. Source: IPUMS USA
 </p>
 </div>
 <p><br></p>
 </div>
 <div id="future-research" class="section level2">
 <h2>Future Research</h2>
-<p>Although the direction of my research will largely be influenced by the Ph.D. program I enroll in, especially through the mentorship of faculty and fellow graduate students, I seek to push the boundaries of my research and make it accessible to audiences that shape immigration policies. Currently, Professor Bonilla-Silva’s “Latin Americanization” thesis is something I seriously think about when it comes to the future of the race/ethnicity demographic proportions of the U.S. and how that will shape global perceptions of immigrants.</p>
+<p>Although the direction of my research will largely be influenced by
+the Ph.D. program I enroll in, especially through the mentorship of
+faculty and fellow graduate students, I seek to push the boundaries of
+my research and make it accessible to audiences that shape immigration
+policies. Currently, Professor Bonilla-Silva’s “Latin Americanization”
+thesis is something I seriously think about when it comes to the future
+of the race/ethnicity demographic proportions of the U.S. and how that
+will shape global perceptions of immigrants.</p>
 </div>
 </div>
 

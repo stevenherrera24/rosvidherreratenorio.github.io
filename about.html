@@ -13,7 +13,7 @@
 
 <title>about.knit</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -139,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -234,7 +242,7 @@ $(document).ready(function () {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -258,7 +266,7 @@ $(document).ready(function () {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-bars"></span>
      
     More
@@ -310,17 +318,50 @@ $(document).ready(function () {
 <p><br></p>
 <div id="background" class="section level2">
 <h2>Background</h2>
-<p>I was born in Guatemala City and lived in an impoverished, urban neighborhood for the first two years of my life. I immigrated to the U.S. soon after and moved across several cities on the east coast. For most of my life, I was raised in a small town in North Carolina called Sanford, which is about 45 minutes south of Raleigh. I attended public schools and was fortunate enough to gain acceptance to the North Carolina Governor’s School summer program in 2016, where I attended for mathematics. Despite growing up well-below the poverty line most of my life, I made the best with what I had, and I thank the countless educators, coaches, and mentors in Sanford for always pushing me to excel.</p>
+<p>I was born in Guatemala City and lived in an impoverished, urban
+neighborhood for the first two years of my life. I immigrated to the
+U.S. soon after and moved across several cities on the east coast. For
+most of my life, I was raised in a small town in North Carolina called
+Sanford, which is about 45 minutes south of Raleigh. I attended public
+schools and was fortunate enough to gain acceptance to the North
+Carolina Governor’s School summer program in 2016, where I attended for
+mathematics. Despite growing up well-below the poverty line most of my
+life, I made the best with what I had, and I thank the countless
+educators, coaches, and mentors in Sanford for always pushing me to
+excel.</p>
 <p><br></p>
 <center>
-<img src="aboutme1.jpg" title="fig:" alt="Sanford Fields" />
+<div class="figure">
+<img src="aboutme1.jpg" alt="" />
+<p class="caption">Sanford Fields</p>
+</div>
 </center>
 <p><br></p>
 </div>
 <div id="education" class="section level2">
 <h2>Education</h2>
-<p>After graduating from Southern Lee High School, I attended Duke University. Thankfully, I was accepted as a <a href="https://rubensteinscholars.duke.edu/">David M. Rubenstein Scholar</a>, which provided me a loan-free, fully-funded educational experience, among many other resources. I majored in Statistical Science at Duke, where I have been trained in Bayesian methods and highly encouraged to pursue independent, interdisciplinary research. I apply rigorous, quantitative methods to interesting social phenomena, which is how I was led to pursue a Sociology minor. During my senior year, I completed a thesis that examined theories of neighborhood integration among Latin American immigrants in the U.S. South using latent class analysis. The project, along the support from Professor Eduardo Bonilla-Silva, encouraged me to apply for Ph.D. programs in Sociology.</p>
-<p>Fortunately, I was accepted to the University of California, Berkeley’s joint Ph.D. program in Sociology and Demography as a recipient of a Chancellor’s Fellowship. Thus far, my experience has been challenging, yet exciting and influential. The best part has definitely been interacting with other students from underrepresented backgrounds like mine. I am amazed at how passionate, insightful, and intelligent Sociology undergraduates are here at Berkeley, and I really look forward to working with some of them in the future.</p>
+<p>After graduating from Southern Lee High School, I attended Duke
+University. Thankfully, I was accepted as a <a
+href="https://rubensteinscholars.duke.edu/">David M. Rubenstein
+Scholar</a>, which provided me a loan-free, fully-funded educational
+experience, among many other resources. I majored in Statistical Science
+at Duke, where I have been trained in Bayesian methods and highly
+encouraged to pursue independent, interdisciplinary research. I apply
+rigorous, quantitative methods to interesting social phenomena, which is
+how I was led to pursue a Sociology minor. During my senior year, I
+completed a thesis that examined theories of neighborhood integration
+among Latin American immigrants in the U.S. South using latent class
+analysis. The project, along the support from Professor Eduardo
+Bonilla-Silva, encouraged me to apply for Ph.D. programs in
+Sociology.</p>
+<p>Fortunately, I was accepted to the University of California,
+Berkeley’s joint Ph.D. program in Sociology and Demography as a
+recipient of a Chancellor’s Fellowship. Thus far, my experience has been
+challenging, yet exciting and influential. The best part has definitely
+been interacting with other students from underrepresented backgrounds
+like mine. I am amazed at how passionate, insightful, and intelligent
+Sociology undergraduates are here at Berkeley, and I really look forward
+to working with some of them in the future.</p>
 <p><br></p>
 </div>
 </div>
