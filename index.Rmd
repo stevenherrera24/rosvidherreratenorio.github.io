@@ -1,5 +1,5 @@
 ---
-title: "index.knit"
+title: " "
 ---
 
 <br>
@@ -12,14 +12,17 @@ title: "index.knit"
 
 <br>
 
-I am a first-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research interests include acculturation, assimilation, and integration theory, racial stratification, migration, demography, and quantitative methods. I was born in Guatemala, grew up in rural North Carolina, and now live in Berkeley, California. I received my undergraduate degree in Statistical Science from Duke University in 2021 as a David M. Rubenstein Scholar.
+I am a second-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research interests include acculturation, assimilation, and integration theory, racial stratification, migration, demography, and quantitative methods. I was born in Guatemala, grew up in rural North Carolina, and now live in Berkeley, California. I received my undergraduate degree in Statistical Science from Duke University in 2021.
 
 <br>
 
-When I am not coding, reading, or completing coursework, I am exploring San Francisco, playing tennis, or Facetiming my dogs in North Carolina. I love my dogs.
+~~When I am not coding, reading, or completing coursework, I am exploring San Francisco, playing tennis, or Facetiming my dogs in North Carolina.~~ I love my dogs. 
+ 
+
+I almost always coding, reading, or completing coursework.
 
 <br>
 
 <center>
-The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: October 26, 2021
+The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: September 22, 2022
 </center>
