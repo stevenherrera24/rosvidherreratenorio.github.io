@@ -16,13 +16,11 @@ I am a second-year Ph.D. student at the University of California, Berkeley in th
 
 <br>
 
-~~When I am not coding, reading, or completing coursework, I am exploring San Francisco, playing tennis, or Facetiming my dogs in North Carolina.~~ I love my dogs. 
- 
+~~When I am not coding, reading, or completing coursework, I am exploring San Francisco, playing tennis, or Facetiming my dogs in North Carolina.~~ I am almost always coding, reading, or completing coursework. I love my dogs. 
 
-I almost always coding, reading, or completing coursework.
 
 <br>
 
 <center>
-The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: September 22, 2022
+The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: October 9, 2022
 </center>
