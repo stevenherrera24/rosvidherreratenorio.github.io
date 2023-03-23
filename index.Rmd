@@ -12,15 +12,12 @@ title: " "
 
 <br>
 
-I am a second-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research interests include acculturation, assimilation, and integration theory, racial stratification, migration, demography, and quantitative methods. I was born in Guatemala, grew up in rural North Carolina, and now live in Berkeley, California. I received my undergraduate degree in Statistical Science from Duke University in 2021.
+I am a second-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research focuses on (ir)rationality, pragmatism, decision-making, and immigration, and I use mixed methods approaches (demography, causal inference, and in-depth interviews). My principle region of interest is the American South. 
 
-<br>
-
-~~When I am not coding, reading, or completing coursework, I am exploring San Francisco, playing tennis, or Facetiming my dogs in North Carolina.~~ I am almost always coding, reading, or completing coursework. I love my dogs. 
-
+I was born in Guatemala, grew up in rural North Carolina, and now live in Berkeley, California. I received a B.S. in Statistical Science from Duke University in 2021.
 
 <br>
 
 <center>
-The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: October 9, 2022
+The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: March 23, 2023
 </center>

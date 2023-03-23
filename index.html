@@ -13,7 +13,7 @@
 
 <title>index.knit</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -180,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -189,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -318,23 +311,20 @@ $(document).ready(function () {
 <p><br></p>
 <p>I am a second-year Ph.D. student at the University of California,
 Berkeley in the joint Ph.D. program in Sociology and Demography. My
-research interests include acculturation, assimilation, and integration
-theory, racial stratification, migration, demography, and quantitative
-methods. I was born in Guatemala, grew up in rural North Carolina, and
-now live in Berkeley, California. I received my undergraduate degree in
-Statistical Science from Duke University in 2021.</p>
-<p><br></p>
-<p><del>When I am not coding, reading, or completing coursework, I am
-exploring San Francisco, playing tennis, or Facetiming my dogs in North
-Carolina.</del> I am almost always coding, reading, or completing
-coursework. I love my dogs.</p>
+research focuses on (ir)rationality, pragmatism, decision-making, and
+immigration, and I use mixed methods approaches (demography, causal
+inference, and in-depth interviews). My principle region of interest is
+the American South.</p>
+<p>I was born in Guatemala, grew up in rural North Carolina, and now
+live in Berkeley, California. I received a B.S. in Statistical Science
+from Duke University in 2021.</p>
 <p><br></p>
 <center>
 The code to make this website is <a
 href="https://github.com/stevenherrera24/stevenherrera24.github.io">here</a>.
 To contact me, click <a
 href="https://stevenherreratenorio.com/contact.html">here</a>. Last
-update: October 9, 2022
+update: March 23, 2023
 </center>
 </div>
 

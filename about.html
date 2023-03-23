@@ -13,7 +13,7 @@
 
 <title>about.knit</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -180,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -189,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -356,15 +349,8 @@ Bonilla-Silva, encouraged me to apply for Ph.D. programs in
 Sociology.</p>
 <p>Fortunately, I was accepted to the University of California,
 Berkeley’s joint Ph.D. program in Sociology and Demography as a
-recipient of a Chancellor’s Fellowship. As I’m making sense of my
-interests, it is becoming increasingly clear that variable
-conceptualization and research design viability is hard to mesh
-together, and the quantitative approaches that I used to consider were
-more difficult to understand are not anymore. It is exciting to be in
-constant communication with my cohort in the Sociology Department, as
-their feedback is strongly challenging and making my thinking clearer.
-I’m also not as afraid of theory as I used to be, which is good, I
-guess.</p>
+recipient of a Chancellor’s Fellowship. Further, I was awarded the Ford
+Foundation’s Predoctoral Fellowship to support my studies.</p>
 <p><br></p>
 </div>
 </div>
