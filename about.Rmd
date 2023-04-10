@@ -19,14 +19,14 @@ I was born in Guatemala City and lived in an impoverished, urban neighborhood fo
 <br>
  
 <center>
-![Sanford Fields](aboutme1.jpg)
+![ ](aboutme1.jpg)
 </center>
  
 <br>
 
 ## Education
 
-After graduating from Southern Lee High School, I attended Duke University. Thankfully, I was accepted as a [David M. Rubenstein Scholar](https://rubensteinscholars.duke.edu/), which provided me a loan-free, fully-funded educational experience, among many other resources. I majored in Statistical Science at Duke, where I have been trained in Bayesian methods and highly encouraged to pursue independent, interdisciplinary research. I apply rigorous, quantitative methods to interesting social phenomena, which is how I was led to pursue a Sociology minor. During my senior year, I completed a thesis that examined theories of neighborhood integration among Latin American immigrants in the U.S. South using latent class analysis. The project, along the support from Professor Eduardo Bonilla-Silva, encouraged me to apply for Ph.D. programs in Sociology.
+After graduating from Southern Lee High School, I attended Duke University. Thankfully, I was accepted as a [David M. Rubenstein Scholar](https://ousf.duke.edu/merit-scholarships/david-m-rubenstein-scholarship/), which provided me a loan-free, fully-funded educational experience, among many other resources. I majored in Statistical Science at Duke, where I have been trained in Bayesian methods and highly encouraged to pursue independent, interdisciplinary research. I apply rigorous, quantitative methods to interesting social phenomena, which is how I was led to pursue a Sociology minor. During my senior year, I completed a thesis that examined theories of neighborhood integration among Latin American immigrants in the U.S. South using latent class analysis. The project, along the support from Professor Eduardo Bonilla-Silva, encouraged me to apply for Ph.D. programs in Sociology.
 
 Fortunately, I was accepted to the University of California, Berkeley's joint Ph.D. program in Sociology and Demography as a recipient of a Chancellor's Fellowship. Further, I was awarded the Ford Foundation's Predoctoral Fellowship to support my studies. 
 

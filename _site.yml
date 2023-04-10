@@ -11,6 +11,9 @@ navbar:
     - text: "About"
       icon: fa-address-card
       href: about.html
+    - text: "Research Study"
+      icon: fa-book-open
+      href: researchstudy.html
     - text: "More"
       icon: fa-bars
       menu:
