@@ -12,12 +12,40 @@ title: " "
 
 <br>
 
-I am a second-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research focuses on (ir)rationality, pragmatism, decision-making, and immigration, and I use mixed methods approaches (demography, causal inference, and in-depth interviews). My principle region of interest is the American South. 
+<center>
 
-I was born in Guatemala, grew up in rural North Carolina, and now live in Berkeley, California. I received a B.S. in Statistical Science from Duke University in 2021.
+<img src = "HeadShotMay2023 copy.jpg" width="400" height="600">
+
+</center>
+ 
+<br>
+
+
+***
+
+<br>
+
+I am a third-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research engages (ir)rationality, pragmatism, decision-making, immigration, and racial stratification (that is, the vision and di-vision of populations on the basis of 'difference' that mostly focuses on 'race', 'class', and 'time' outcomes), and I use mixed methods approaches ((historical) demography, causal inference, and in-depth interviews). I am primarily advised by Professors Mara Loveman and Irene Bloemraad. 
+
+I was born in Guatemala, grew up in (rural) North Carolina, and now live in Berkeley, California. I received a B.S. in Statistical Science with a minor in Sociology from Duke University in 2021. And lastly, I am funded by the UC-Berkeley Graduate Division's Chancellor's Fellowship (2021-2023) and (with the National Academy of Sciences, Engineering, and Medicine) the Ford Foundation Pre-Doctoral Fellowship (2023-2026). 
+
+<br>
+
+
+***
 
 <br>
 
 <center>
-The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: March 23, 2023
+
+ASA 2023--Philadelphia: I will be presenting my paper, titled "Evaluating the Residential Mobility of Latin American Immigrants in the U.S. South, 2005-2006," at Table 3: New Destinations/Similar Precarities, which falls under the Section on Latina/o Sociology Roundtables, on **Friday, August 18th from 4-5 PM at the Pennsylvania Convention Center, Floor: 100 Level, Room: 103A**. This is my first academic conference ever, and I look forward to connecting with several scholars, especially those in the fields of 'race' (especially on methods to avoid the reification of 'race', either by altogether abandoning the term or other creative ways to be 'race' conscious), immigration (especially post-1965 'new'/'third' generation immigrants and the 'culture' of immigrants in the 'New' South), and social theory (especially theory 'of methods' approaches that engages categorical analysis, the Bayesian vs. Frequentist debate and its related 'problems' within sociology/demography, and 'regional analysis'). 
+
+</center>
+
+<br>
+
+***
+
+<center>
+The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: July 21, 2023
 </center>
