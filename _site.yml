@@ -8,14 +8,11 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "About"
-      icon: fa-address-card
-      href: about.html
     - text: "More"
       icon: fa-bars
       menu:
         - text: "CV"
-          href: RSHT.CV.pdf
+          href: CV.HerreraTenorio.Website.pdf
         - text: "Contact"
           href: contact.html
   right:
