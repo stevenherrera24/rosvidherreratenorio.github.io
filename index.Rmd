@@ -25,7 +25,7 @@ title: " "
 
 <br>
 
-I am a third-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research engages the sociology of immigration, ethnoracial classification, and the politics of quantification, and I'm very interested in situating my research in the American South. I'm originally from rural North Carolina, but I was born in Guatemala. I received a B.S. in Statistical Science with a minor in Sociology from Duke University in 2021 and a M.A. in Demography from UC-Berkeley in 2022.
+I am a third-year Ph.D. student at the University of California, Berkeley in the joint Ph.D. program in Sociology and Demography. My research engages the sociology of immigration, ethnoracial classification/inequality/politics, urban sociology, demography, and social theory. I'm very interested in situating my research in the American South. I'm originally from rural North Carolina, but I was born in Guatemala. I received a B.S. in Statistical Science with a minor in Sociology from Duke University in 2021 and a M.A. in Demography from UC-Berkeley in 2023.
 
 <br>
 
@@ -33,5 +33,5 @@ I am a third-year Ph.D. student at the University of California, Berkeley in the
 ***
 
 <center>
-The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: November 13, 2023
+The code to make this website is [here](https://github.com/stevenherrera24/stevenherrera24.github.io). To contact me, click [here](https://stevenherreratenorio.com/contact.html). Last update: February 23, 2024
 </center>
