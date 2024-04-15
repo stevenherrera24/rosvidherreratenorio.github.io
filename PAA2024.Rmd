@@ -1,0 +1,22 @@
+---
+title: ' '
+---
+
+<br>
+
+<center>
+# PAA 2024 Supplemental Poster Tables and Figures
+</center>
+
+***
+
+<br>
+
+Demographic Table:
+
+```{r }
+demographic_table <- readRDS("demographic_table.Rds")
+
+demographic_table
+```
+

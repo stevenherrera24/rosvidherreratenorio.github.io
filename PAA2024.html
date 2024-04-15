@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>PAA2024.knit</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-bars"></span>
+     
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="PAA2024.html">PAA</a>
+    </li>
+    <li>
+      <a href="CV.HerreraTenorio.Website.pdf">CV</a>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/stevenherrera24">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/rosvidstevenherrera/">
+    <span class="fa fa-linkedin"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<center>
+<div id="paa-2024-supplemental-poster-tables-and-figures"
+class="section level1">
+<h1>PAA 2024 Supplemental Poster Tables and Figures</h1>
+</center>
+<hr />
+<p><br></p>
+<p>Demographic Table:</p>
+<pre class="r"><code>demographic_table &lt;- readRDS(&quot;demographic_table.Rds&quot;)
+
+demographic_table</code></pre>
+<table class="table" style="font-size: 14px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Variable
+</th>
+<th style="text-align:center;">
+Levels
+</th>
+<th style="text-align:center;">
+Northeast
+</th>
+<th style="text-align:center;">
+Midwest
+</th>
+<th style="text-align:center;">
+South
+</th>
+<th style="text-align:center;">
+West
+</th>
+<th style="text-align:center;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="18">
+<td colspan="7" style="border-bottom: 1px solid;">
+<strong>Latent Variables</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+White Prop
+</td>
+<td style="text-align:center;">
+[0.00142,0.611)
+</td>
+<td style="text-align:center;">
+20995 (17.3)
+</td>
+<td style="text-align:center;">
+16339 (9.4)
+</td>
+<td style="text-align:center;">
+83135 (32.9)
+</td>
+<td style="text-align:center;">
+62264 (43.3)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[0.61055,0.850)
+</td>
+<td style="text-align:center;">
+32242 (26.5)
+</td>
+<td style="text-align:center;">
+34238 (19.8)
+</td>
+<td style="text-align:center;">
+121962 (48.2)
+</td>
+<td style="text-align:center;">
+54890 (38.1)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[0.85027,0.991]
+</td>
+<td style="text-align:center;">
+68337 (56.2)
+</td>
+<td style="text-align:center;">
+122628 (70.8)
+</td>
+<td style="text-align:center;">
+47814 (18.9)
+</td>
+<td style="text-align:center;">
+26752 (18.6)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Hispanic Prop
+</td>
+<td style="text-align:center;">
+[0.0000,0.0319)
+</td>
+<td style="text-align:center;">
+53900 (44.3)
+</td>
+<td style="text-align:center;">
+103840 (60.0)
+</td>
+<td style="text-align:center;">
+80464 (31.8)
+</td>
+<td style="text-align:center;">
+5658 (3.9)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[0.0319,0.1257)
+</td>
+<td style="text-align:center;">
+42350 (34.8)
+</td>
+<td style="text-align:center;">
+57232 (33.0)
+</td>
+<td style="text-align:center;">
+91177 (36.1)
+</td>
+<td style="text-align:center;">
+43894 (30.5)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[0.1257,0.9796]
+</td>
+<td style="text-align:center;">
+25324 (20.8)
+</td>
+<td style="text-align:center;">
+12133 (7.0)
+</td>
+<td style="text-align:center;">
+81270 (32.1)
+</td>
+<td style="text-align:center;">
+94354 (65.6)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Black Prop
+</td>
+<td style="text-align:center;">
+[0.0000,0.0281)
+</td>
+<td style="text-align:center;">
+55807 (45.9)
+</td>
+<td style="text-align:center;">
+90620 (52.3)
+</td>
+<td style="text-align:center;">
+27855 (11.0)
+</td>
+<td style="text-align:center;">
+77740 (54.0)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[0.0281,0.1186)
+</td>
+<td style="text-align:center;">
+40965 (33.7)
+</td>
+<td style="text-align:center;">
+54816 (31.6)
+</td>
+<td style="text-align:center;">
+88724 (35.1)
+</td>
+<td style="text-align:center;">
+53285 (37.0)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[0.1186,0.9838]
+</td>
+<td style="text-align:center;">
+24802 (20.4)
+</td>
+<td style="text-align:center;">
+27769 (16.0)
+</td>
+<td style="text-align:center;">
+136332 (53.9)
+</td>
+<td style="text-align:center;">
+12881 (9.0)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Other Prop
+</td>
+<td style="text-align:center;">
+[0.0000,0.0171)
+</td>
+<td style="text-align:center;">
+39803 (32.7)
+</td>
+<td style="text-align:center;">
+82974 (47.9)
+</td>
+<td style="text-align:center;">
+107363 (42.5)
+</td>
+<td style="text-align:center;">
+9391 (6.5)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[0.0171,0.0453)
+</td>
+<td style="text-align:center;">
+40969 (33.7)
+</td>
+<td style="text-align:center;">
+64004 (37.0)
+</td>
+<td style="text-align:center;">
+93184 (36.8)
+</td>
+<td style="text-align:center;">
+39122 (27.2)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[0.0453,0.7829]
+</td>
+<td style="text-align:center;">
+40802 (33.6)
+</td>
+<td style="text-align:center;">
+26227 (15.1)
+</td>
+<td style="text-align:center;">
+52364 (20.7)
+</td>
+<td style="text-align:center;">
+95393 (66.3)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Median Rent
+</td>
+<td style="text-align:center;">
+[200, 505)
+</td>
+<td style="text-align:center;">
+33314 (27.4)
+</td>
+<td style="text-align:center;">
+102208 (59.0)
+</td>
+<td style="text-align:center;">
+115468 (45.7)
+</td>
+<td style="text-align:center;">
+19623 (13.6)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[505, 705)
+</td>
+<td style="text-align:center;">
+31512 (25.9)
+</td>
+<td style="text-align:center;">
+52317 (30.2)
+</td>
+<td style="text-align:center;">
+87516 (34.6)
+</td>
+<td style="text-align:center;">
+46290 (32.2)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[705,1700]
+</td>
+<td style="text-align:center;">
+56748 (46.7)
+</td>
+<td style="text-align:center;">
+18680 (10.8)
+</td>
+<td style="text-align:center;">
+49927 (19.7)
+</td>
+<td style="text-align:center;">
+77993 (54.2)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Vacant Prop
+</td>
+<td style="text-align:center;">
+[ 0.666, 6.66)
+</td>
+<td style="text-align:center;">
+54944 (45.2)
+</td>
+<td style="text-align:center;">
+50316 (29.0)
+</td>
+<td style="text-align:center;">
+47829 (18.9)
+</td>
+<td style="text-align:center;">
+72097 (50.1)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[ 6.663,11.41)
+</td>
+<td style="text-align:center;">
+34347 (28.3)
+</td>
+<td style="text-align:center;">
+72432 (41.8)
+</td>
+<td style="text-align:center;">
+94371 (37.3)
+</td>
+<td style="text-align:center;">
+41900 (29.1)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[11.410,56.39]
+</td>
+<td style="text-align:center;">
+32283 (26.6)
+</td>
+<td style="text-align:center;">
+50457 (29.1)
+</td>
+<td style="text-align:center;">
+110711 (43.8)
+</td>
+<td style="text-align:center;">
+29909 (20.8)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr grouplength="27">
+<td colspan="7" style="border-bottom: 1px solid;">
+<strong>Predictor Variables</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Mover Status
+</td>
+<td style="text-align:center;">
+Moved
+</td>
+<td style="text-align:center;">
+15137 (12.5)
+</td>
+<td style="text-align:center;">
+25096 (14.5)
+</td>
+<td style="text-align:center;">
+44817 (17.7)
+</td>
+<td style="text-align:center;">
+26618 (18.5)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+Did not Move
+</td>
+<td style="text-align:center;">
+106437 (87.5)
+</td>
+<td style="text-align:center;">
+148109 (85.5)
+</td>
+<td style="text-align:center;">
+208094 (82.3)
+</td>
+<td style="text-align:center;">
+117288 (81.5)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Ethnoracial Identity
+</td>
+<td style="text-align:center;">
+Black
+</td>
+<td style="text-align:center;">
+8338 (6.9)
+</td>
+<td style="text-align:center;">
+9433 (5.4)
+</td>
+<td style="text-align:center;">
+35049 (13.9)
+</td>
+<td style="text-align:center;">
+4906 (3.4)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+Hispanic
+</td>
+<td style="text-align:center;">
+9795 (8.1)
+</td>
+<td style="text-align:center;">
+7556 (4.4)
+</td>
+<td style="text-align:center;">
+32700 (12.9)
+</td>
+<td style="text-align:center;">
+36885 (25.6)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+White
+</td>
+<td style="text-align:center;">
+103441 (85.1)
+</td>
+<td style="text-align:center;">
+156216 (90.2)
+</td>
+<td style="text-align:center;">
+185162 (73.2)
+</td>
+<td style="text-align:center;">
+102115 (71.0)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Birth Cohort
+</td>
+<td style="text-align:center;">
+1955-1965 Cohort
+</td>
+<td style="text-align:center;">
+55064 (45.3)
+</td>
+<td style="text-align:center;">
+74877 (43.2)
+</td>
+<td style="text-align:center;">
+103773 (41.0)
+</td>
+<td style="text-align:center;">
+58682 (40.8)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+1965-1975 Cohort
+</td>
+<td style="text-align:center;">
+43047 (35.4)
+</td>
+<td style="text-align:center;">
+57553 (33.2)
+</td>
+<td style="text-align:center;">
+87124 (34.4)
+</td>
+<td style="text-align:center;">
+49527 (34.4)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+1975-1986 Cohort
+</td>
+<td style="text-align:center;">
+22773 (18.7)
+</td>
+<td style="text-align:center;">
+39092 (22.6)
+</td>
+<td style="text-align:center;">
+59121 (23.4)
+</td>
+<td style="text-align:center;">
+34084 (23.7)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+1986-1987 Cohort
+</td>
+<td style="text-align:center;">
+690 (0.6)
+</td>
+<td style="text-align:center;">
+1683 (1.0)
+</td>
+<td style="text-align:center;">
+2893 (1.1)
+</td>
+<td style="text-align:center;">
+1613 (1.1)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Immigrant Cohort
+</td>
+<td style="text-align:center;">
+1955-1965 IM
+</td>
+<td style="text-align:center;">
+759 (0.6)
+</td>
+<td style="text-align:center;">
+540 (0.3)
+</td>
+<td style="text-align:center;">
+1496 (0.6)
+</td>
+<td style="text-align:center;">
+1125 (0.8)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+1965-1975 IM
+</td>
+<td style="text-align:center;">
+1766 (1.5)
+</td>
+<td style="text-align:center;">
+948 (0.5)
+</td>
+<td style="text-align:center;">
+2811 (1.1)
+</td>
+<td style="text-align:center;">
+2715 (1.9)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+1975-1986 IM
+</td>
+<td style="text-align:center;">
+3502 (2.9)
+</td>
+<td style="text-align:center;">
+1796 (1.0)
+</td>
+<td style="text-align:center;">
+6645 (2.6)
+</td>
+<td style="text-align:center;">
+8632 (6.0)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+1986-1987 IM
+</td>
+<td style="text-align:center;">
+11127 (9.2)
+</td>
+<td style="text-align:center;">
+6295 (3.6)
+</td>
+<td style="text-align:center;">
+21629 (8.6)
+</td>
+<td style="text-align:center;">
+19352 (13.4)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+Non-Immigrant
+</td>
+<td style="text-align:center;">
+104420 (85.9)
+</td>
+<td style="text-align:center;">
+163626 (94.5)
+</td>
+<td style="text-align:center;">
+220330 (87.1)
+</td>
+<td style="text-align:center;">
+112082 (77.9)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Education (Years)
+</td>
+<td style="text-align:center;">
+Mean (SD)
+</td>
+<td style="text-align:center;">
+13.9 (2.6)
+</td>
+<td style="text-align:center;">
+13.5 (2.3)
+</td>
+<td style="text-align:center;">
+13.3 (2.7)
+</td>
+<td style="text-align:center;">
+13.3 (3.0)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Household Income
+</td>
+<td style="text-align:center;">
+[&lt;20K)
+</td>
+<td style="text-align:center;">
+9705 (8.0)
+</td>
+<td style="text-align:center;">
+16339 (9.4)
+</td>
+<td style="text-align:center;">
+29424 (11.6)
+</td>
+<td style="text-align:center;">
+13393 (9.3)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[20k-40k)
+</td>
+<td style="text-align:center;">
+17708 (14.6)
+</td>
+<td style="text-align:center;">
+30652 (17.7)
+</td>
+<td style="text-align:center;">
+48785 (19.3)
+</td>
+<td style="text-align:center;">
+25680 (17.8)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[40k-60k)
+</td>
+<td style="text-align:center;">
+21424 (17.6)
+</td>
+<td style="text-align:center;">
+36410 (21.0)
+</td>
+<td style="text-align:center;">
+50175 (19.8)
+</td>
+<td style="text-align:center;">
+26746 (18.6)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[60k-80k)
+</td>
+<td style="text-align:center;">
+20315 (16.7)
+</td>
+<td style="text-align:center;">
+32735 (18.9)
+</td>
+<td style="text-align:center;">
+40680 (16.1)
+</td>
+<td style="text-align:center;">
+22951 (15.9)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[80k-100k)
+</td>
+<td style="text-align:center;">
+15555 (12.8)
+</td>
+<td style="text-align:center;">
+22060 (12.7)
+</td>
+<td style="text-align:center;">
+28771 (11.4)
+</td>
+<td style="text-align:center;">
+16894 (11.7)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+[100k+]
+</td>
+<td style="text-align:center;">
+36867 (30.3)
+</td>
+<td style="text-align:center;">
+35009 (20.2)
+</td>
+<td style="text-align:center;">
+55076 (21.8)
+</td>
+<td style="text-align:center;">
+38242 (26.6)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Renter Status
+</td>
+<td style="text-align:center;">
+Rented
+</td>
+<td style="text-align:center;">
+34124 (28.1)
+</td>
+<td style="text-align:center;">
+38279 (22.1)
+</td>
+<td style="text-align:center;">
+72825 (28.8)
+</td>
+<td style="text-align:center;">
+51359 (35.7)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+Not Rented
+</td>
+<td style="text-align:center;">
+87450 (71.9)
+</td>
+<td style="text-align:center;">
+134926 (77.9)
+</td>
+<td style="text-align:center;">
+180086 (71.2)
+</td>
+<td style="text-align:center;">
+92547 (64.3)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Self-Employed Status
+</td>
+<td style="text-align:center;">
+Self-Employed
+</td>
+<td style="text-align:center;">
+15083 (12.4)
+</td>
+<td style="text-align:center;">
+20186 (11.7)
+</td>
+<td style="text-align:center;">
+31398 (12.4)
+</td>
+<td style="text-align:center;">
+21167 (14.7)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+Not Self-Employed
+</td>
+<td style="text-align:center;">
+106491 (87.6)
+</td>
+<td style="text-align:center;">
+153019 (88.3)
+</td>
+<td style="text-align:center;">
+221513 (87.6)
+</td>
+<td style="text-align:center;">
+122739 (85.3)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+Married-Couple Status
+</td>
+<td style="text-align:center;">
+Married-Couple Household
+</td>
+<td style="text-align:center;">
+85837 (70.6)
+</td>
+<td style="text-align:center;">
+124899 (72.1)
+</td>
+<td style="text-align:center;">
+176653 (69.8)
+</td>
+<td style="text-align:center;">
+100091 (69.6)
+</td>
+<td style="text-align:center;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:center;padding-left: 2em;" indentlevel="1">
+</td>
+<td style="text-align:center;">
+Non-Married-Couple Household
+</td>
+<td style="text-align:center;">
+35737 (29.4)
+</td>
+<td style="text-align:center;">
+48306 (27.9)
+</td>
+<td style="text-align:center;">
+76258 (30.2)
+</td>
+<td style="text-align:center;">
+43815 (30.4)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -11,6 +11,8 @@ navbar:
     - text: "More"
       icon: fa-bars
       menu:
+        - text: "PAA"
+          href: PAA2024.html
         - text: "CV"
           href: CV.HerreraTenorio.Website.pdf
         - text: "Contact"
