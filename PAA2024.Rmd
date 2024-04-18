@@ -12,11 +12,129 @@ title: ' '
 
 <br>
 
-Demographic Table:
+```{r include = FALSE}
+library(tidyverse)
+library(kableExtra)
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
+knitr::opts_chunk$set(echo = F,
+                      message = F,
+                      warning = F)
+```
 
-```{r }
+
+## Important Terms, Concepts, and Notes
+
+<br>
+
+**Spatial Assimilation**, coined by Doug Massey, refers to the process whereby a group attains residential propinquity with members of a host society
+
+**Place Stratification**, a theory that emerged as a result of political economy’s influence in the late 80s, refers to the persistence of prejudice and discrimination that act to constrain the residential mobility options of disadvantaged groups.
+
+**Public Use Microdata Areas (PUMAs)**, the smallest, publicly-available ecological unit from the Integrated Public Use Microdata Series (IPUMS) U.S.A. database, and it contains at least 100,000 individuals.
+
+**Latent Class Analysis**, a method that allows for the dependent variable to take on a more robust set of variables to characterize qualitatively different subgroups, and at the same time runs an underlying multinomial logistic regression model to explore more complex relationships between latent outcomes and predictor variables. In this case, I use a 4-class model.
+
+**A note on the year immigrated variable**: Figure 3 breaks things down by year immigrated. Why is this important? For many reasons! Years 1955-1965 was the decade following the 1954 Operation Wetback, which was a federal government-sponsored initiative that began to crack down on illegal immigration. Then, in 1965, the Hart-Celler Act (or otherwise known as the Immigration and Nationality Act of 1965) opened up new pathways for immigrants from historically underrepresented countries, while at the same time legalizing and institutionalizing quotas. It wasn't until the next big immigration act, the 1986 IRCA (also known as the Immigration Reform and Control Act), that changed a lot of things: it regulated the employment of undocumented immigrants, increased border militarization at the U.S.-Mexico border, and allocated funds for detention centers, surveillance hardware, police patrolling, and fencing, all while labor-demand in the South was rising rapidly. Hence, these years are explored to determine any significant outcomes between ethnoracial groups.
+
+<br>
+
+## Visualizations on Poster
+
+<br>
+
+  1. **Figure 1**: Latent Class Ideal Area-Type Makeup
+
+```{r fig.height=4, fig.width=7}
+model2neigh <- readRDS("model2neigh.Rds")
+
+model2neigh
+```
+
+<br>
+
+  2. **Figure 2**: Mapping Predicted Outcomes With and Without Regional Variation
+  
+```{r fig.height=8, fig.width=7}
+map_paa <- readRDS("map_paa.Rds")
+
+grid.arrange(map_paa)
+```
+
+<br>
+
+  3. **Figure 3**: Comparing White and Hispanic Southerners
+  
+```{r fig.height=7, fig.width=7}
+hisp_whi_paa <- readRDS("hisp_whi_paa.Rds")
+
+grid.arrange(hisp_whi_paa)
+```
+
+<br>
+
+## Additional Tables and Figures
+
+<br>
+
+  1. Observed Sample Statistics and Proportions by Region:
+
+```{r}
 demographic_table <- readRDS("demographic_table.Rds")
 
 demographic_table
 ```
 
+<br>
+
+  2. Correlation Plot Displaying Pairwise Associations of Chi-Squared Tests Between Categorical Variables, Pearson Correlation Tests Between Numeric Variables, and ANOVA Tests Between Categorical and Numerical Variables with Association Cutoffs at 0.7.
+
+```{r fig.height=7, fig.width=7}
+corplot <- readRDS("corplot.Rds")
+
+corplot
+```
+
+<br>
+
+  3. Model Output for Both Models
+  
+```{r}
+paa_model <- readRDS("paa_model.Rds")
+
+paa_model
+```
+
+<br>
+
+  4. Same as Figure 3, except comparing White, Black, and Hispanic Southerners
+  
+```{r fig.height=9, fig.width=7}
+hisp_whi_bla_paa <- readRDS("hisp_whi_bla_paa.Rds")
+
+grid.arrange(hisp_whi_bla_paa)
+```
+
+<br>
+
+  5. Same as last figure except comparing White, Black, and Hispanic Westerners
+  
+```{r fig.height=9, fig.width=7}
+hisp_whi_bla_west_paa <- readRDS("hisp_whi_bla_west_paa.Rds")
+
+grid.arrange(hisp_whi_bla_west_paa)
+```
+
+<br>
+
+  6. And for Northeasterners!
+  
+```{r fig.height=9, fig.width=7}
+hisp_whi_bla_northeast_paa <- readRDS("hisp_whi_bla_northeast_paa.Rds")
+
+grid.arrange(hisp_whi_bla_northeast_paa)
+```
+
+<br>
