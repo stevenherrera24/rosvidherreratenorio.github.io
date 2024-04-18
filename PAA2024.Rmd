@@ -40,6 +40,15 @@ knitr::opts_chunk$set(echo = F,
 **A note on the year immigrated variable**: Figure 3 breaks things down by year immigrated. Why is this important? For many reasons! Years 1955-1965 was the decade following the 1954 Operation Wetback, which was a federal government-sponsored initiative that began to crack down on illegal immigration. Then, in 1965, the Hart-Celler Act (or otherwise known as the Immigration and Nationality Act of 1965) opened up new pathways for immigrants from historically underrepresented countries, while at the same time legalizing and institutionalizing quotas. It wasn't until the next big immigration act, the 1986 IRCA (also known as the Immigration Reform and Control Act), that changed a lot of things: it regulated the employment of undocumented immigrants, increased border militarization at the U.S.-Mexico border, and allocated funds for detention centers, surveillance hardware, police patrolling, and fencing, all while labor-demand in the South was rising rapidly. Hence, these years are explored to determine any significant outcomes between ethnoracial groups.
 
 <br>
+ 
+<center>
+
+![ ](paapic.png)
+</center>
+ 
+<br>
+
+<br>
 
 ## Visualizations on Poster
 
